@@ -1,0 +1,26 @@
+
+.about-container {
+    height:100%;
+    width: 100%;
+    position:relative;
+    background-image: url(https://d1pshulnvyevhv.cloudfront.net/wp-content/uploads/2018/01/18130937/World-Map.png);
+    background-size: cover;
+    backdrop-filter: blur(6px);
+   
+}
+
+.card-zoom{
+    transition: transform .2s;
+}
+.card-zoom:hover{
+    transform: scale(1.15) !important;
+    
+}
+
+
+
+
+
+
+
+
