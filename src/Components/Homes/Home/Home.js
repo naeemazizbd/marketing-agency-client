@@ -5,6 +5,7 @@ import AboutUs from '../AboutUs/AboutUs';
 import Contact from '../Contact/Contact';
 import Experience from '../Experience/Experience';
 import Header from '../Header/Header';
+import AddReview from '../ReviewData/AddReview/AddReview';
 import ReviewData from '../ReviewData/ReviewData/ReviewData';
 import Subscription from '../Subscription/Subscription';
 
@@ -19,6 +20,7 @@ const Home = () => {
             <Contact/>
             <Subscription/>
             <Footer/>
+        
         </div>
     );
 };

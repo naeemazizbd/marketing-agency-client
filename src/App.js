@@ -12,7 +12,11 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Review from './Components/Homes/ReviewData/Review/Review';
 import Login from './Components/Login/Login/Login';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
-import addServices from './Components/Services/addServices/addServices';
+// import AddServices from './Components/Services/addServices/AddServices';
+import NotMatch from './Components/NotMatch/NotMatch';
+import AddReview from './Components/Homes/ReviewData/AddReview/AddReview';
+import AddServices from './Components/Services/addServices/AddService';
+import Order from './Components/OrderData/Order/Order';
 export const UserContext = createContext();
 
 function App() {
@@ -26,20 +30,30 @@ function App() {
           <PrivateRoute path="/review">
             <Review/>
           </PrivateRoute>
-          <PrivateRoute path="/dashboard">
+          <PrivateRoute  exact path="/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
           <Route path="/login">
             <Login/>
           </Route>
           <PrivateRoute path="/dashboard/addServices">
-            <addServices/>
+          {/* <Dashboard></Dashboard> */}
+            <AddServices/>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/addReview">
+            <AddReview/>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/order">
+            <Order/>
           </PrivateRoute>
           <Route exact path="/">
             <Home/>
           </Route>
           <Route path="/home">
             <Home/>
+          </Route>
+          <Route path="*">
+            <NotMatch/>
           </Route>
         </Switch>
       </Router>

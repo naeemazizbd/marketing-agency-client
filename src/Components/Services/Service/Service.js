@@ -1,42 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ServiceData from '../ServiceData/ServiceData';
 
 const Service = () => {
+    const [services, setServices] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/api/services')
+            .then((res) => res.json())
+            .then((data) => setServices(data.data))
+            .catch((err) => console.log(err));
+    }, []);
 
-    const serviceData = [
-        {
-            name: 'Doctor Chamber Visit',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus iste asperiores, ut quos vel vitae rerum voluptas quam facilis architecto.',
-            img: 'https://i.ibb.co/SyR7QQb/digital-marketing-team-41910-363.png',
-        },
-        {
-            name: 'Home Medical Service',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus iste asperiores, ut quos vel vitae rerum voluptas quam facilis architecto.',
-            img: 'https://i.ibb.co/SyR7QQb/digital-marketing-team-41910-363.png',
-        },
-        {
-            name: 'Ambulance Service',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus iste asperiores, ut quos vel vitae rerum voluptas quam facilis architecto.',
-            img: 'https://i.ibb.co/SyR7QQb/digital-marketing-team-41910-363.png',
-        },
-        {
-            name: 'Ambulance Service',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus iste asperiores, ut quos vel vitae rerum voluptas quam facilis architecto.',
-            img: 'https://i.ibb.co/SyR7QQb/digital-marketing-team-41910-363.png',
-        }
-    ]
+    console.log(services);
+
     return (
         <div className="my-5 px-3">
             <div className=" ms-4  ">
                 <h5 className="text-warning">OUR SERVICES </h5>
                 <h2 className="">We Provide This Service</h2>
-
             </div>
             <div className="d-flex  justify-content-center">
                 <div className=" row  ">
-                    {
-                        serviceData.map(service => <ServiceData service={service} key={service.name}></ServiceData>)
-                    }
+                    {services?.map((service) => (
+                        <ServiceData service={service} key={service._id} />
+                    ))}
                 </div>
             </div>
         </div>

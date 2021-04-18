@@ -5,3 +5,7 @@
     transform: scale(1.30) !important;
     
 }
+.card-img img{
+    width: 250px;
+    height: 250px;
+}
