@@ -12,7 +12,7 @@ const Review = ({ review }) => {
                 <div className="bg-light p-2 d-flex  align-items-center">
                     <img
                         className="mx-3 rounded-circle bg-danger"
-                        src={`http://localhost:5000/${review.image}`}
+                        src={`https://peaceful-temple-45354.herokuapp.com/${review.image}`}
                         alt=""
                         height="50"
                         width="50"

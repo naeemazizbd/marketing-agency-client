@@ -22,7 +22,7 @@
 
 #### Project Live
  
-:heavy_check_mark: Show Live  site  [Marketing Star](https://book-plex-10.web.app/).
+:heavy_check_mark: Show Live  site  [Marketing Star](https://marketing-star21.web.app/).
 
 ### Thank You So Much  :blue_heart:
 

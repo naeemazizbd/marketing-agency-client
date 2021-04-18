@@ -4,7 +4,7 @@ import ServiceData from '../ServiceData/ServiceData';
 const Service = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/services')
+        fetch('https://peaceful-temple-45354.herokuapp.com/api/services')
             .then((res) => res.json())
             .then((data) => setServices(data.data))
             .catch((err) => console.log(err));

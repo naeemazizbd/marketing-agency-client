@@ -5,7 +5,7 @@ const ReviewData = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/reviews')
+        fetch('https://peaceful-temple-45354.herokuapp.com/api/reviews')
             .then((res) => res.json())
             .then((data) => setReviews(data))
             .catch((err) => console.log(err));

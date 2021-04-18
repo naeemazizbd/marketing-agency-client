@@ -13,7 +13,7 @@ const AddServices = () => {
 
     useEffect(() => {
         function getData() {
-            fetch('http://localhost:5000/api/services')
+            fetch('https://peaceful-temple-45354.herokuapp.com/api/services')
                 .then((res) => res.json())
                 .then((data) => setServices(data.data))
                 .catch((err) => console.log(err));
@@ -41,7 +41,7 @@ const AddServices = () => {
     const deleteServiceHandler = (id) => {
         const isChanged = window.confirm('Are you Sure!');
         if (isChanged) {
-            fetch(`http://localhost:5000/api/services/${id}`, {
+            fetch(`https://peaceful-temple-45354.herokuapp.com/api/services/${id}`, {
                 method: 'DELETE',
             })
                 .then((res) => res.json())
@@ -61,7 +61,7 @@ const AddServices = () => {
             formData.set(key, service[key]);
         }
 
-        fetch(`http://localhost:5000/api/services`, {
+        fetch(`https://peaceful-temple-45354.herokuapp.com/api/services`, {
             method: 'POST',
             body: formData,
         })
@@ -141,7 +141,7 @@ const AddServices = () => {
                                     <td> {service.description} </td>
                                     <td>
                                         <img
-                                            src={`http://localhost:5000/${service.image}`}
+                                            src={`https://peaceful-temple-45354.herokuapp.com/${service.image}`}
                                             width="100px"
                                             alt=""
                                         />

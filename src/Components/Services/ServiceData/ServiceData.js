@@ -8,7 +8,7 @@ const ServiceData = ({ service }) => {
                   <div className="card-img">
                         <img
                         className="img-fluid "
-                        src={`http://localhost:5000/${service.image}`}
+                        src={`https://peaceful-temple-45354.herokuapp.com/${service.image}`}
                         alt=""
                     />
                   </div>

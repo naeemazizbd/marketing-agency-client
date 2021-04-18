@@ -20,7 +20,7 @@ const AddReview = () => {
 
     useEffect(() => {
         function getData() {
-            fetch('http://localhost:5000/api/reviews')
+            fetch('https://peaceful-temple-45354.herokuapp.com/api/reviews')
                 .then((res) => res.json())
                 .then((data) => setReviews(data))
                 .catch((err) => console.log(err));
@@ -37,7 +37,7 @@ const AddReview = () => {
     const deleteReviewHandler = (id) => {
         const isDeleted = window.confirm('Are you Sure!');
         if (isDeleted) {
-            fetch(`http://localhost:5000/api/reviews/${id}`, {
+            fetch(`https://peaceful-temple-45354.herokuapp.com/api/reviews/${id}`, {
                 method: 'DELETE',
             })
                 .then((res) => res.json())
@@ -50,7 +50,7 @@ const AddReview = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:5000/api/reviews`, {
+        fetch(`https://peaceful-temple-45354.herokuapp.com/api/reviews`, {
             method: 'POST',
             body: JSON.stringify(review),
             headers: {
